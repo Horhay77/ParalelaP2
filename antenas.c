@@ -244,7 +244,7 @@ int main(int nargs, char ** vargs){
 		
 		// Calculo de la nueva antena y actualización del mapa
 		Antena antena = nueva_antena(mapa, rows, cols, max);
-		printf("NEW: %d %d\n",antena.y, antena.x);
+		//printf("NEW: %d %d\n",antena.y, antena.x);
 		actualizar(mapa,rows,cols,antena);
 
 	}
