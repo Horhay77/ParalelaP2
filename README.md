@@ -1,12 +1,12 @@
 Práctica MPI: Paralelización de código
 =================
 
-| Autores |
+|Autores|
 |-------|
 |Lucía Gil Román|
 |Jorge Hernández de Benito|
 
-# Pasos tomados
+# Pasos tomados:
 
 En una primera aproximación al problema se tomaron las siguientes medidas:
 - División del mapa de forma equitativa entre los procesos mediante el reparto de las filas.
@@ -14,8 +14,17 @@ En una primera aproximación al problema se tomaron las siguientes medidas:
 - Creación de una operación de reducción (`MPI_Op`) de búsqueda de mejor antena.
 
 Segunda mejora:
-- Dado que las máquinas sobre las que ejecutamos el código paralelo no tienen las mismas características, se busca desbalancear la carga de trabajo en función de la eficiencia que proporcionan.
+- Dado que las máquinas sobre las que ejecutamos el código paralelo no tienen las mismas características, se busca desbalancear la carga de trabajo otorgando más a las máquinas con mayor eficiencia.
 
 Tercera mejora:
 - Si hacemos una actualización de las distancias alejándonos de la antena, si una fila no es actualizada significa que podemos parar de hacer la actualización ya que las nuevas distancias serán peores o iguales a las que ya hay.
 
+# Tiempos obtenidos:
+
+|Iteración|Tiempo|
+|-----|------|
+|1|8.651|
+|2|7.349|
+|3|6.441|
+
+¿ Realizar una actualización por diagonales ?
